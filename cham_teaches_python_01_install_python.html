@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>cham_teches_python_01_install_python</title>
+<title>cham_teaches_python_01_install_python</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -174,30 +174,24 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="https://www.python.org/static/img/python-logo.png"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Welcome-to-my-lessons">Welcome to my lessons<a class="anchor-link" href="#Welcome-to-my-lessons">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Welcome-to-my-lessons">Welcome to my lessons<a class="anchor-link" href="#Welcome-to-my-lessons">&#182;</a></h1><hr>
 <p><strong>Bo Zhang</strong> (NAOC, <mailto:bozhang@nao.cas.cn>) will have a few lessons on python.</p>
 <ul>
 <li>These are very useful knowledge, skills and code styles when you use <code>python</code> to process astronomical data.</li>
 <li>All materials can be found on <a href="https://github.com/hypergravity/cham_teaches_python">my github page</a>.</li>
-<li>ipython notebook (now re-named jupyter) is recommeded to use</li>
+<li>jupyter (ipython notebook) is recommeded to use</li>
 </ul>
+<hr>
+<p>These lectures are organized as below:</p>
+<ol>
+<li>install python</li>
+<li>basic syntax</li>
+<li>numerical computing</li>
+<li>plotting</li>
+<li>astronomical data processing</li>
+<li>high performance computing</li>
+<li>version control</li>
+</ol>
 
 </div>
 </div>
@@ -229,14 +223,30 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Advantages">Advantages<a class="anchor-link" href="#Advantages">&#182;</a></h1><ol>
+<li>easy-to-use/understand</li>
+<li>extensions</li>
+<li>astronomical packages</li>
+<li>high performance computing</li>
+<li>open source</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="how-to-install-python">how to install python<a class="anchor-link" href="#how-to-install-python">&#182;</a></h1><p>type these in your terminal:</p>
 
-<pre><code>sudo apt-get install pip
-sudo pip install python</code></pre>
+<pre><code>$ sudo apt-get install pip
+$ sudo pip install python</code></pre>
 <p><code>pip</code> can install almost all <code>python</code> packages.
 So I recommend you use this to install all packages.</p>
 <p>An alternative is to use <code>easy_install</code>, which is a very similar tool.</p>
-<p>type <code>python</code> to enter the python shell
+<p>type <code>$ python</code> to enter the python shell
 <img src="./stuff01/Screenshot from 2016-06-12 15:37:21.png" alt=""></p>
 
 </div>
@@ -244,7 +254,7 @@ So I recommend you use this to install all packages.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s">&quot;Hello World&quot;</span>
@@ -268,22 +278,6 @@ So I recommend you use this to install all packages.</p>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Advantages">Advantages<a class="anchor-link" href="#Advantages">&#182;</a></h1><ol>
-<li>easy-to-use/understand</li>
-<li>extensions</li>
-<li>astronomical packages</li>
-<li>high performance computing</li>
-<li>open source</li>
-</ol>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -335,7 +329,21 @@ So I recommend you use this to install all packages.</p>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">magic</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre>%%bash
+ls -a
 </pre></div>
 
 </div>
