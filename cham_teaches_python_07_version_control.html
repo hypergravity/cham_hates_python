@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>cham_teaches_python_01_install_python</title>
+<title>cham_teaches_python_07_version_control</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -202,32 +202,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-python?">What is <code>python</code>?<a class="anchor-link" href="#What-is-python?">&#182;</a></h1><ul>
-<li>Python is an <strong>interpreted</strong>, <strong>object-oriented</strong>, <strong>high-level</strong> programming language with <strong>dynamic semantics</strong>.</li>
-<li>Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. </li>
-<li>Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. </li>
-<li>Python supports modules and packages, which encourages program modularity and code reuse.</li>
-<li>The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.</li>
-</ul>
-<hr>
-<p>Often, programmers fall in love with Python because of the increased productivity it provides. Since there is <strong>no compilation step</strong>, the edit-test-debug cycle is incredibly fast. Debugging Python programs is easy: a bug or bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises an <strong>exception</strong>. When the program doesn't catch the exception, the interpreter prints a stack trace. A source level debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting breakpoints, stepping through the code a line at a time, and so on. The debugger is written in Python itself, testifying to Python's introspective power. On the other hand, <strong>often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very effective</strong>.</p>
-<p><em>reference</em>: <a href="https://www.python.org/doc/essays/blurb/">https://www.python.org/doc/essays/blurb/</a></p>
-<p><em>comparison with some other programming languages</em>:<a href="https://www.python.org/doc/essays/comparisons/">https://www.python.org/doc/essays/comparisons/</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Advantages-as-scientific/astronomical-computing-language">Advantages as scientific/astronomical computing language<a class="anchor-link" href="#Advantages-as-scientific/astronomical-computing-language">&#182;</a></h1><ol>
-<li>easy-to-use/understand</li>
-<li>extensions</li>
-<li>astronomical packages</li>
-<li>high performance computing</li>
-<li>open source</li>
+<h1 id="Steps-to-set-up-an-account-and-a-new-repository">Steps to set up an account and a new repository<a class="anchor-link" href="#Steps-to-set-up-an-account-and-a-new-repository">&#182;</a></h1><ol>
+<li>Register an account, i.e., hypergravity. Then the page on github would be <a href="https://github.com/hypergravity">https://github.com/hypergravity</a></li>
+<li>Add a new repository, say, bopy. The link is <a href="https://github.com/hypergravity/bopy.git">https://github.com/hypergravity/bopy.git</a></li>
+<li>Generate rsa key: <code>$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></li>
+<li>Copy the key, and paste it in the Github account: <code>$ gedit ~/.ssh/id_rsa.pub</code></li>
 </ol>
 
 </div>
@@ -238,18 +217,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Websites-you-must-know-if-you-use-python">Websites you must know if you use python<a class="anchor-link" href="#Websites-you-must-know-if-you-use-python">&#182;</a></h1><ul>
-<li>python.org: <a href="https://www.python.org/">https://www.python.org/</a><ul>
-<li>this is the official web page of <code>python</code>
-<img src="./stuff01/Screenshot from 2016-06-12 15:26:58.png" alt="www.python.org"></li>
-</ul>
-</li>
-<li>pypi (<strong>PY</strong>thon <strong>P</strong>ackage <strong>I</strong>ndex): <a href="https://pypi.python.org/pypi">https://pypi.python.org/pypi</a><ul>
-<li>from here, you can download almost all <code>python</code> packages
-<img src="./stuff01/Screenshot from 2016-06-12 15:16:33.png" alt=""></li>
-</ul>
-</li>
-</ul>
+<h1 id="Useful-software:-gitk">Useful software: <strong>gitk</strong><a class="anchor-link" href="#Useful-software:-gitk">&#182;</a></h1><p>To install <strong>gitk</strong>, type:</p>
+
+<pre><code>$ sudo apt-get install gitk
+
+</code></pre>
+<p>Check whether <strong>gitk</strong> is installed:</p>
+
+<pre><code>$ which gitk
+
+</code></pre>
+<p>If installed, it will tell you:</p>
+
+<pre><code>/usr/bin/gitk</code></pre>
 
 </div>
 </div>
@@ -259,145 +239,52 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-to-install-python?">How to install python?<a class="anchor-link" href="#How-to-install-python?">&#182;</a></h1><p>type these in your terminal:</p>
+<h1 id="Useful-commands---local-to-remote">Useful commands - local to remote<a class="anchor-link" href="#Useful-commands---local-to-remote">&#182;</a></h1><p>There are several commands very useful:</p>
 
-<pre><code>$ sudo apt-get install pip
-$ sudo pip install python</code></pre>
-<p><code>pip</code> can install almost all <code>python</code> packages.
-So I recommend you use this to install all packages.</p>
-<p>An alternative is to use <code>easy_install</code>, which is a very similar tool.</p>
-<p>type <code>$ python</code> to enter the python shell
-<img src="./stuff01/Screenshot from 2016-06-12 15:37:21.png" alt=""></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="s">&quot;Hello World&quot;</span>
-</pre></div>
+<pre><code>git init
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/hypergravity/bopy.git
+git push origin master
+# Pushes the changes in your local repository up to the remote repository
+# you specified as the origin</code></pre>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello World
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Recommended-IDEs-(Interactive-Development-Environments)">Recommended IDEs (Interactive Development Environments)<a class="anchor-link" href="#Recommended-IDEs-(Interactive-Development-Environments)">&#182;</a></h1><ul>
-<li><p>spyder / python(x,y) / <a href="https://www.continuum.io/why-anaconda">anaconda</a></p>
-<ul>
-<li>scientific computing</li>
-<li>easy-to-use</li>
-<li>ipython backend
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Spyder_logo.svg/100px-Spyder_logo.svg.png" alt="">
-<img src="./stuff01/Screenshot from 2016-06-12 15:56:43.png" alt=""></li>
-</ul>
-</li>
-<li><p><a href="https://ipython.org/">ipython/ipython qtconsole</a></p>
-<ul>
-<li>shell-like</li>
-<li>magic functions
-<img src="./stuff01/Screenshot from 2016-06-12 16:13:59.png" alt="">
-<img src="./stuff01/Screenshot from 2016-06-12 16:15:16.png" alt=""></li>
-</ul>
-</li>
-<li><p><a href="http://jupyter.org/">jupyter (ipython notebook)</a></p>
-<ul>
-<li>magic functions</li>
-<li>markdown</li>
-<li>various format (html, pdf, ...)
-<img src="./stuff01/Screenshot from 2016-06-12 16:24:08.png" alt=""></li>
-</ul>
-</li>
-<li><p><a href="https://www.jetbrains.com/">JetBrain (Pycharm)</a></p>
-<ul>
-<li>code folding</li>
-<li>version control</li>
-<li>module test</li>
-<li>code reformat
-<img src="./stuff01/Screenshot from 2016-06-12 16:26:01.png" alt=""></li>
-</ul>
-</li>
-</ul>
+<h2 id="Code-history">Code history<a class="anchor-link" href="#Code-history">&#182;</a></h2>
+<pre><code>git log
+git reset --hard 723a0f617fabcc9f1bb4c350d6e51a5d35fe1029
+git push --force</code></pre>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="o">%</span><span class="k">magic</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Useful-videos-(Chinese)">Useful videos (Chinese)<a class="anchor-link" href="#Useful-videos-(Chinese)">&#182;</a></h1><p><a href="http://www.tudou.com/programs/view/7RqMt2ArmUY/">http://www.tudou.com/programs/view/7RqMt2ArmUY/</a></p>
+<p><a href="http://www.tudou.com/programs/view/la2AcmOLa6U/">http://www.tudou.com/programs/view/la2AcmOLa6U/</a></p>
 
 </div>
 </div>
 </div>
-
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre>%%bash
-ls -a
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quick-setup">Quick setup<a class="anchor-link" href="#Quick-setup">&#182;</a></h1><p><a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/</a></p>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>.
-..
-cham_teaches_python_01_install_python.html
-cham_teaches_python_01_install_python.ipynb
-cham_teaches_python_02_basic_syntax.html
-cham_teaches_python_02_basic_syntax.ipynb
-cham_teaches_python_03_numerical_computing.ipynb
-cham_teaches_python_04_plotting.ipynb
-cham_teaches_python_05_astronomical_data_processing_1_basic.ipynb
-cham_teaches_python_05_astronomical_data_processing_2_advanced.ipynb
-cham_teaches_python_06_high_performance_computing.ipynb
-cham_teaches_python_07_version_control.ipynb
-.git
-.ipynb_checkpoints
-stuff01
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -424,6 +311,16 @@ stuff01
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="reference">reference<a class="anchor-link" href="#reference">&#182;</a></h1><p><a href="https://github.com/hypergravity/champy/wiki/How-to-set-up-github">https://github.com/hypergravity/champy/wiki/How-to-set-up-github</a></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
