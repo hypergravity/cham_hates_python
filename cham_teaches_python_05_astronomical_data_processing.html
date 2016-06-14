@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>cham_teaches_python_05_astronomical_data_processing_1_basic</title>
+<title>cham_teaches_python_05_astronomical_data_processing</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -196,6 +196,146 @@ div#notebook {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Astronomical-data-format-standard---.fits-files">Astronomical data format standard - .fits files<a class="anchor-link" href="#Astronomical-data-format-standard---.fits-files">&#182;</a></h1><ul>
+<li>HDUs<ul>
+<li>Primary HDU</li>
+<li>Image HDU</li>
+<li>BinTable HDU (Binary Table)</li>
+</ul>
+</li>
+<li>HDU header<ul>
+<li>keywords</li>
+<li>column information for tables</li>
+</ul>
+</li>
+<li>HDU data</li>
+</ul>
+<p><em>reference</em>:</p>
+<ul>
+<li><a href="http://fits.gsfc.nasa.gov/">http://fits.gsfc.nasa.gov/</a></li>
+<li><a href="http://fits.gsfc.nasa.gov/fits_wcs.html">http://fits.gsfc.nasa.gov/fits_wcs.html</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Usually,-you-will-meet:">Usually, you will meet:<a class="anchor-link" href="#Usually,-you-will-meet:">&#182;</a></h1><ul>
+<li>1d image stored using WCS (world coordinate system)<ul>
+<li>SDSS DR7 spectra</li>
+<li>IRAF spectra fits</li>
+</ul>
+</li>
+<li>2d image stored using WCS (world coordinate system)<ul>
+<li>all photometry images (2MASS, WISE, ...)</li>
+</ul>
+</li>
+<li>table / catalog<ul>
+<li>LAMOST catalog</li>
+<li>SDSS DR10/12 spectra</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
+
+<span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+<span class="c"># read hdu list</span>
+<span class="c"># read fits info</span>
+
+<span class="c"># read HDU header</span>
+<span class="c"># read HDU data</span>
+
+<span class="c"># transform data to WVS coordinates</span>
+
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<span class="n">Table</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">Table</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
+<span class="c"># use Table.read to read various table formats</span>
+<span class="c"># use Table.write</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-5-9decb3040d83&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">      1</span> <span class="ansigreen">from</span> astropy<span class="ansiyellow">.</span>io <span class="ansigreen">import</span> fits<span class="ansiyellow"></span>
+<span class="ansigreen">      2</span> <span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 3</span><span class="ansiyellow"> </span>fits<span class="ansiyellow">.</span>open<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">      4</span> <span class="ansired"># read hdu list</span><span class="ansiyellow"></span><span class="ansiyellow"></span>
+<span class="ansigreen">      5</span> <span class="ansired"># read fits info</span><span class="ansiyellow"></span><span class="ansiyellow"></span>
+
+<span class="ansired">TypeError</span>: fitsopen() takes at least 1 argument (0 given)</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="next-section">next section<a class="anchor-link" href="#next-section">&#182;</a></h1><p>aplpy, healpy,</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
