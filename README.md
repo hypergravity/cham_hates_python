@@ -33,13 +33,33 @@ These lectures are organized as below:
 
 PYTHON VERSIONS AND DEPENDENCIES
 ================================
-python 2.7.6
-ipython 3.2.3
+
+- python 2.7.6
+- ipython 4.0.0
+- spyder==2.3.9
+- multiprocessing==2.6.2.1
+- numpy==1.8.2
+- numpydoc==0.5
+- scipy==0.16.1
+- matplotlib==1.5.0
+- astropy==1.1.post2
+- astropy-helpers==1.1.dev
+- corner==1.0.0
+- ipykernel==4.2.2
+- ipyparallel==4.1.0
+- ipython==4.0.0
+- ipython-genutils==0.1.0
+- ipywidgets==4.1.1
+- jupyter==1.0.0
+- jupyter-client==4.1.1
+- jupyter-console==4.0.3
+- jupyter-core==4.0.6
+- jupyter-pip==0.3
 
 
 ISSUES
 ======
-
+Temporally python3 is not used.
 
 
 
