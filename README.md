@@ -20,6 +20,7 @@ DOCUMENTATION
 - **jupyter notebook** (formerly named **ipython notebook**) is recommeded to use
 
 These lectures are organized as below:
+  
 1. install python
 2. basic syntax
 3. numerical computing
