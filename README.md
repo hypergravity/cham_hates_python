@@ -1,5 +1,5 @@
-cham_teaches_python
-===================
+CHAM_HATES_PYTHON
+=================
 This is the matierial used in **Bo Zhang's lecture on python @NAOC stars & star systems group**.
 
 
@@ -39,12 +39,10 @@ PYTHON VERSIONS AND DEPENDENCIES
 - spyder==2.3.9
 - multiprocessing==2.6.2.1
 - numpy==1.8.2
-- numpydoc==0.5
 - scipy==0.16.1
 - matplotlib==1.5.0
 - astropy==1.1.post2
 - astropy-helpers==1.1.dev
-- corner==1.0.0
 - ipykernel==4.2.2
 - ipyparallel==4.1.0
 - ipython==4.0.0
