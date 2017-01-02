@@ -15,12 +15,13 @@ Any people are welcome to contribute to this package.
 
 DOCUMENTATION
 =============
-- These are **very useful knowledge, skills and code styles** when you use `python` to process astronomical data.
+- These are **very useful knowledge, skills and code styles** for `python` beginners to process astronomical data.
 - All materials can be found on [**my github page**](https://github.com/hypergravity/cham_teaches_python).
+- Use [jupyter nbviewer](http://nbviewer.jupyter.org/github/hypergravity/cham_hates_python/tree/master/notebook/) to read this repo.
 - **jupyter notebook** (formerly named **ipython notebook**) is recommeded to use
 
 These lectures are organized as below:
-  
+
 1. install python
 2. basic syntax
 3. numerical computing
@@ -58,9 +59,3 @@ PYTHON VERSIONS AND DEPENDENCIES
 ISSUES
 ======
 Temporally python3 is not used.
-
-
-
-
-
-
